@@ -12,6 +12,6 @@
 
 @interface ProfileViewController : UIViewController
 
-@property (weak, nonatomic) User *user;
+@property (strong, nonatomic) User *user;
 
 @end

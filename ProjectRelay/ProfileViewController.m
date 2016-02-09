@@ -31,14 +31,17 @@
 
 - (void)viewDidLoad
 {
-    _likesArray = [[NSMutableArray alloc]init];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    _user = [User user];
 
     [_profileImageView.layer setBorderColor:[[kColorConstants silverWithAlpha:1.0] CGColor]];
     [_profileImageView.layer setBorderWidth:4.3]; // For Border width
     [_profileImageView.layer setCornerRadius:45.0f]; // For Corner radious
     [_profileImageView.layer setMasksToBounds:YES];
+
+    _likesArray = [[NSMutableArray alloc]init];
 
     [self getUserImage];
     [self userLikesQuery];
@@ -60,9 +63,8 @@
 
 - (void)getUserImage
 {
-    User *cUser = [User new];
 
-    PFFile *userPhoto = [cUser objectForKey:@"profileImage"];
+    PFFile *userPhoto = [_user objectForKey:@"profileImage"];
     [userPhoto getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
      {
          if (!error)
@@ -85,9 +87,9 @@
 
 - (void)userLikesQuery
 {
-    User *cUser = _user;
-    NSLog(@"%@", cUser);
-    PFRelation *relationQuery = [cUser relationForKey:@"likedArticles"];
+//    User *cUser = _user;
+//    NSLog(@"%@", cUser);
+    PFRelation *relationQuery = [_user relationForKey:@"likedArticles"];
     PFQuery *query = [relationQuery query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error)
      {
@@ -109,6 +111,24 @@
          [_tableView reloadData];
      }];
     
+}
+
+- (void)userQuery
+{
+    _user = [User user];
+    PFQuery *userQuery = [User query];
+    [userQuery whereKey:@"username" equalTo:_user.username];
+    [userQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error)
+    {
+        if (!error)
+        {
+            NSLog(@"YAY");
+        }
+        else
+        {
+            NSLog(@"shit....");
+        }
+    }];
 }
 
 
@@ -138,11 +158,12 @@
          if (!error)
          {
              UIImage *image = [UIImage imageWithData:data];
-             cell.articleImage.image = image;
-             [cell.articleImage.layer setBorderColor:[[kColorConstants cloudsWithAlpha:1.0]CGColor]];
-             [cell.articleImage.layer setBorderWidth:4.3];
-             [cell.articleImage.layer setCornerRadius:30.0f];
-             [cell.articleImage.layer setMasksToBounds:YES];
+//             cell.articleImage.image = image;
+//             [cell.articleImage.layer setBorderColor:[[kColorConstants cloudsWithAlpha:1.0]CGColor]];
+//             [cell.articleImage.layer setBorderWidth:4.3];
+//             [cell.articleImage.layer setCornerRadius:30.0f];
+//             [cell.articleImage.layer setMasksToBounds:YES];
+             cell.imageView.image = image;
          }
          else
          {

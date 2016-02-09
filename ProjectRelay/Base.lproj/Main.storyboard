@@ -856,6 +856,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HQW-yZ-KY7" id="zHY-cl-gtw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="99.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                 </tableViewCellContentView>
@@ -958,14 +959,14 @@
                                         <exclude reference="1TI-dI-qtP"/>
                                         <exclude reference="cQn-gf-Va7"/>
                                         <exclude reference="l97-GY-eTP"/>
-                                        <exclude reference="1Ur-iQ-DVk"/>
-                                        <exclude reference="H9O-aN-elX"/>
-                                        <exclude reference="ieF-JL-RzN"/>
-                                        <exclude reference="zvN-hY-dAC"/>
                                         <exclude reference="Cpj-Ok-9Gx"/>
                                         <exclude reference="DWw-iF-YIr"/>
                                         <exclude reference="b56-HI-ZTp"/>
                                         <exclude reference="zp4-Q7-4fK"/>
+                                        <exclude reference="1Ur-iQ-DVk"/>
+                                        <exclude reference="H9O-aN-elX"/>
+                                        <exclude reference="ieF-JL-RzN"/>
+                                        <exclude reference="zvN-hY-dAC"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -977,14 +978,14 @@
                                         <include reference="1TI-dI-qtP"/>
                                         <include reference="cQn-gf-Va7"/>
                                         <include reference="l97-GY-eTP"/>
-                                        <include reference="1Ur-iQ-DVk"/>
-                                        <include reference="H9O-aN-elX"/>
-                                        <include reference="ieF-JL-RzN"/>
-                                        <include reference="zvN-hY-dAC"/>
                                         <include reference="Cpj-Ok-9Gx"/>
                                         <include reference="DWw-iF-YIr"/>
                                         <exclude reference="b56-HI-ZTp"/>
                                         <exclude reference="zp4-Q7-4fK"/>
+                                        <include reference="1Ur-iQ-DVk"/>
+                                        <include reference="H9O-aN-elX"/>
+                                        <include reference="ieF-JL-RzN"/>
+                                        <include reference="zvN-hY-dAC"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1007,6 +1008,7 @@
                                 <exclude reference="ATu-M5-Jr4"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="lhk-Fg-c1U"/>
                                 <exclude reference="4yF-Bn-cPX"/>
                                 <exclude reference="n7b-ft-R35"/>
                                 <exclude reference="tLg-sE-WAS"/>
@@ -1014,7 +1016,6 @@
                                 <exclude reference="GhJ-u8-Sz2"/>
                                 <exclude reference="hmj-cm-DFE"/>
                                 <exclude reference="v0w-fQ-o7Y"/>
-                                <exclude reference="lhk-Fg-c1U"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1023,6 +1024,7 @@
                                 <include reference="ATu-M5-Jr4"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="lhk-Fg-c1U"/>
                                 <include reference="4yF-Bn-cPX"/>
                                 <include reference="n7b-ft-R35"/>
                                 <include reference="tLg-sE-WAS"/>
@@ -1030,7 +1032,6 @@
                                 <include reference="GhJ-u8-Sz2"/>
                                 <include reference="hmj-cm-DFE"/>
                                 <include reference="v0w-fQ-o7Y"/>
-                                <include reference="lhk-Fg-c1U"/>
                             </mask>
                         </variation>
                     </view>
