@@ -146,6 +146,7 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:NSStringFromClass(Article.class)];
     [query selectKeys:@[@"title",@"url",@"descriptionText",@"articleImage",@"objectId"]];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
      {
          returnArray(objects,error);
