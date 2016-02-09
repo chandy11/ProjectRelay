@@ -18,6 +18,7 @@
 #import "RKDropdownAlert.h"
 #import "ArticleTableViewCell.h"
 #import "kColorConstants.h"
+#import "ProfileViewController.h"
 
 @interface DailyRitualViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -35,6 +36,7 @@
 @end
 
 @implementation DailyRitualViewController
+
 
 - (void)viewDidLoad
 {
@@ -354,7 +356,9 @@
     else if (_segmentControl.selectedSegmentIndex == 1)
     {
         User *user = _followingArray[indexPath.row];
-        [self performSegueWithIdentifier:@"" sender:user];
+        [self performSegueWithIdentifier:@"profileViewSegue" sender:user];
+
+
     }
     else
     {
@@ -371,6 +375,7 @@
 #warning Compete this method with user viewcontroller
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+
     if ([segue.identifier isEqual:@"articleViewSegue"])
     {
         Article *article = (Article *)sender;
@@ -381,6 +386,9 @@
     else if ([segue.identifier isEqual:@"profileViewSegue"])
     {
         User *user = (User *)sender;
+        ProfileViewController *vc = [segue destinationViewController];
+        vc.user = user;
+        NSLog(@"%@", user);
     }
 }
 

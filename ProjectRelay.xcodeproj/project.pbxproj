@@ -63,6 +63,7 @@
 		57E941081C47487700612F43 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E941071C47487700612F43 /* CommentCell.m */; };
 		57F13AAC1C3866D000A7B5A8 /* InitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F13AAB1C3866D000A7B5A8 /* InitalViewController.m */; };
 		85084DE15969A6B585D233D1 /* libPods-ProjectRelay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B28A2C3799CA9495E27A8C5B /* libPods-ProjectRelay.a */; };
+		E190CD8F1C66638C00639992 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E190CD8E1C66638C00639992 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,8 @@
 		57F13AAB1C3866D000A7B5A8 /* InitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitalViewController.m; sourceTree = "<group>"; };
 		9336555E0D760AA1D309F0F7 /* Pods-ProjectRelay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRelay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRelay/Pods-ProjectRelay.debug.xcconfig"; sourceTree = "<group>"; };
 		B28A2C3799CA9495E27A8C5B /* libPods-ProjectRelay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectRelay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E190CD8D1C66638C00639992 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E190CD8E1C66638C00639992 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +368,8 @@
 			children = (
 				57BAE9E91C043E8400DE8AE0 /* DailyRitualViewController.h */,
 				57BAE9EA1C043E8400DE8AE0 /* DailyRitualViewController.m */,
+				E190CD8D1C66638C00639992 /* ProfileViewController.h */,
+				E190CD8E1C66638C00639992 /* ProfileViewController.m */,
 			);
 			name = "Ritual ViewControllers";
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				57087EFE1C59697300FA3ADC /* kColorConstants.m in Sources */,
 				57F13AAC1C3866D000A7B5A8 /* InitalViewController.m in Sources */,
 				5794A4F01C2F95B4007CB04A /* ArticleTableViewCell.m in Sources */,
+				E190CD8F1C66638C00639992 /* ProfileViewController.m in Sources */,
 				57399A061C16E39F00A85D5F /* NewsFeedViewController.m in Sources */,
 				576F41351C19401700477D49 /* SignupViewController.m in Sources */,
 				576F41321C19265D00477D49 /* WebArticleViewController.m in Sources */,
