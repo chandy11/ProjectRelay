@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIAlertController *alert;
+@property (weak, nonatomic) IBOutlet UIView *segmentBackroundView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (strong, nonatomic) User *user;
 @property (strong, nonatomic) NSMutableArray *articleArray;
@@ -43,6 +44,9 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
+
+    UIView *segmentBackroundView = _segmentBackroundView;
+    segmentBackroundView.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
 }
 
 - (void)viewDidAppear:(BOOL)animated

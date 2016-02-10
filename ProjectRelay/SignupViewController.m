@@ -13,6 +13,7 @@
 #import "User.h"
 #import "IonIcons.h"
 #import "RKDropdownAlert.h"
+#import "kColorConstants.h"
 
 @interface SignupViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -59,6 +60,11 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
+
+    UIButton *goToLoginButton = _goToLoginButton;
+    UIButton *signUpButton = _signUpButton;
+    goToLoginButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
+    signUpButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
 }
 
 //------------------------------------------- User Signup Methods ---------------------------------------

@@ -152,6 +152,9 @@
 
     _articles = [_likesArray objectAtIndex:indexPath.row];
 
+    cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+    cell.descriptionLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+
     PFFile *file = _articles.articleImage;
     [file getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
      {
@@ -180,12 +183,6 @@
      {
          //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];;
      }];
-
-
-    cell.titleLable.text = _articles.title;
-    cell.usernameLabel.text = @"";
-    cell.descriptionLabel.text = _articles.descriptionText;
-    cell.backgroundColor = [UIColor lightGrayColor];
 
 
     return cell;

@@ -9,10 +9,12 @@
 #import "InitalViewController.h"
 #import "SignupViewController.h"
 #import "LoginViewController.h"
+#import "kColorConstants.h"
 
 @interface InitalViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -21,7 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    UIButton *loginButton = _loginButton;
+    UIButton *signupButton = _signupButton;
+    loginButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
+    signupButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
+    UIImage *image = [UIImage imageNamed:@"logo"];
+    _imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning

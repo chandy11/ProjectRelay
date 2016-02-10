@@ -61,6 +61,8 @@
 
 #pragma
 #pragma mark - UI Eelements
+
+
 - (void)setNavBar
 {
     [self.navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor blackColor],
@@ -227,6 +229,7 @@
         cell.usernameLabel.text = @""; 
         cell.descriptionLabel.text = _articles.descriptionText;
         cell.backgroundColor = [UIColor lightGrayColor];
+
     }
     else
     {

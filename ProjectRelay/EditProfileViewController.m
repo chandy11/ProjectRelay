@@ -34,6 +34,8 @@
     [super viewDidLoad];
     _imagePicker = [UIImagePickerController new];
     _imagePicker.delegate = self;
+    UIButton *submitButton = _submitButton;
+    submitButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,6 +14,10 @@
 
 
 @interface SettingsViewController () <MFMailComposeViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *privacyButton;
+@property (weak, nonatomic) IBOutlet UIButton *contactButton;
+@property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+@property (weak, nonatomic) IBOutlet UIButton *logOutButton;
 
 @end
 
@@ -23,6 +27,20 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
+    UIButton *privacyButton = _privacyButton;
+    UIButton *contactButton = _contactButton;
+    UIButton *editProfileButton = _editProfileButton;
+    UIButton *logOutButton = _logOutButton;
+
+    [privacyButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateNormal];
+    [privacyButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateHighlighted];
+    [contactButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateNormal];
+    [contactButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateHighlighted];
+    [editProfileButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateNormal];
+    [editProfileButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateHighlighted];
+    [logOutButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateNormal];
+    [logOutButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateHighlighted];
+
 }
 
 - (IBAction)sendEmailAction:(UIButton *)sender

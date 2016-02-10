@@ -11,10 +11,13 @@
 #import "BackendFunctions.h"
 #import "RKDropDownAlert.h"
 #import "User.h"
+#import "kColorConstants.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (strong, nonatomic) UIAlertController *alert;
 @property (strong, nonatomic) User *user;
 
@@ -32,6 +35,11 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
+
+    UIButton *loginButton = _loginButton;
+    UIButton *signUpButton = _signUpButton;
+    loginButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
+    signUpButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
 }
 
 //------------------------------------------- User Login Methods ---------------------------------------
