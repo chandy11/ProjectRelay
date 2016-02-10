@@ -135,9 +135,10 @@
         NSLog(@"selected article: %@", article);
         [self performSegueWithIdentifier:@"toWebViewSegue" sender:article];
     }
-    else
+    else if (_segmentControl.selectedSegmentIndex == 1)
     {
-        nil;
+        User *user = _displayArray[indexPath.row];
+        [self performSegueWithIdentifier:@"" sender:user];
     }
 }
 
@@ -187,6 +188,10 @@
         WebArticleViewController *vc = [segue destinationViewController];
         NSLog(@"passed article.. before segue: %@", article);
         vc.article = article;
+    }
+    else if ([segue.identifier isEqual:@""])
+    {
+        User *user = (User *)sender;
     }
 }
 
