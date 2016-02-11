@@ -111,24 +111,6 @@
      }];
     
 }
-//
-//- (void)userQuery
-//{
-//    _user = [User user];
-//    PFQuery *userQuery = [User query];
-//    [userQuery whereKey:@"username" equalTo:_user.username];
-//    [userQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error)
-//    {
-//        if (!error)
-//        {
-//            NSLog(@"YAY");
-//        }
-//        else
-//        {
-//            NSLog(@"shit....");
-//        }
-//    }];
-//}
 
 
 #pragma
