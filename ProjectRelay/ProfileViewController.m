@@ -34,8 +34,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _user = [User new];
-
     [_profileImageView.layer setBorderColor:[[kColorConstants silverWithAlpha:1.0] CGColor]];
     [_profileImageView.layer setBorderWidth:4.3]; // For Border width
     [_profileImageView.layer setCornerRadius:45.0f]; // For Corner radious
@@ -43,9 +41,9 @@
     
     [self userLikesQuery];
 
-//    _likesArray = [[NSMutableArray alloc]init];
+    _likesArray = [[NSMutableArray alloc]init];
 
-//    [self getUserImage];
+    [self getUserImage];
     [_tableView reloadData];
     [self useRefreshControl];
 
@@ -62,29 +60,29 @@
     [_refreshControl endRefreshing];
 }
 
-//- (void)getUserImage
-//{
-//
-//    PFFile *userPhoto = [_user objectForKey:@"profileImage"];
-//    [userPhoto getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
-//     {
-//         if (!error)
-//         {
-//             _profileImage = [UIImage imageWithData:data];
-//             _profileImageView.image = _profileImage;
-//         }
-//         else
-//         {
-//             NSLog(@"%@", error.localizedDescription);
-//             [RKDropdownAlert title:@"Something Went Wrong!"
-//                            message:error.localizedDescription
-//                    backgroundColor:[UIColor redColor]
-//                          textColor:[UIColor whiteColor]
-//                               time:1.0];
-//
-//         }
-//     }];
-//}
+- (void)getUserImage
+{
+
+    PFFile *userPhoto = [_user objectForKey:@"profileImage"];
+    [userPhoto getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
+     {
+         if (!error)
+         {
+             _profileImage = [UIImage imageWithData:data];
+             _profileImageView.image = _profileImage;
+         }
+         else
+         {
+             NSLog(@"%@", error.localizedDescription);
+             [RKDropdownAlert title:@"Something Went Wrong!"
+                            message:error.localizedDescription
+                    backgroundColor:[UIColor redColor]
+                          textColor:[UIColor whiteColor]
+                               time:1.0];
+
+         }
+     }];
+}
 
 - (void)userLikesQuery
 {
@@ -113,24 +111,24 @@
      }];
     
 }
-
-- (void)userQuery
-{
-    _user = [User user];
-    PFQuery *userQuery = [User query];
-    [userQuery whereKey:@"username" equalTo:_user.username];
-    [userQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error)
-    {
-        if (!error)
-        {
-            NSLog(@"YAY");
-        }
-        else
-        {
-            NSLog(@"shit....");
-        }
-    }];
-}
+//
+//- (void)userQuery
+//{
+//    _user = [User user];
+//    PFQuery *userQuery = [User query];
+//    [userQuery whereKey:@"username" equalTo:_user.username];
+//    [userQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error)
+//    {
+//        if (!error)
+//        {
+//            NSLog(@"YAY");
+//        }
+//        else
+//        {
+//            NSLog(@"shit....");
+//        }
+//    }];
+//}
 
 
 #pragma
@@ -201,17 +199,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
