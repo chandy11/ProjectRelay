@@ -34,17 +34,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _user = [User user];
+    _user = [User new];
 
     [_profileImageView.layer setBorderColor:[[kColorConstants silverWithAlpha:1.0] CGColor]];
     [_profileImageView.layer setBorderWidth:4.3]; // For Border width
     [_profileImageView.layer setCornerRadius:45.0f]; // For Corner radious
     [_profileImageView.layer setMasksToBounds:YES];
-
-    _likesArray = [[NSMutableArray alloc]init];
-
-    [self getUserImage];
+    
     [self userLikesQuery];
+
+//    _likesArray = [[NSMutableArray alloc]init];
+
+//    [self getUserImage];
     [_tableView reloadData];
     [self useRefreshControl];
 
@@ -61,29 +62,29 @@
     [_refreshControl endRefreshing];
 }
 
-- (void)getUserImage
-{
-
-    PFFile *userPhoto = [_user objectForKey:@"profileImage"];
-    [userPhoto getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
-     {
-         if (!error)
-         {
-             _profileImage = [UIImage imageWithData:data];
-             _profileImageView.image = _profileImage;
-         }
-         else
-         {
-             NSLog(@"%@", error.localizedDescription);
-             [RKDropdownAlert title:@"Something Went Wrong!"
-                            message:error.localizedDescription
-                    backgroundColor:[UIColor redColor]
-                          textColor:[UIColor whiteColor]
-                               time:1.0];
-
-         }
-     }];
-}
+//- (void)getUserImage
+//{
+//
+//    PFFile *userPhoto = [_user objectForKey:@"profileImage"];
+//    [userPhoto getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)
+//     {
+//         if (!error)
+//         {
+//             _profileImage = [UIImage imageWithData:data];
+//             _profileImageView.image = _profileImage;
+//         }
+//         else
+//         {
+//             NSLog(@"%@", error.localizedDescription);
+//             [RKDropdownAlert title:@"Something Went Wrong!"
+//                            message:error.localizedDescription
+//                    backgroundColor:[UIColor redColor]
+//                          textColor:[UIColor whiteColor]
+//                               time:1.0];
+//
+//         }
+//     }];
+//}
 
 - (void)userLikesQuery
 {

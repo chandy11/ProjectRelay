@@ -71,7 +71,7 @@ typedef void (^ArrayReturnBlock)(NSArray *array, NSError *error);
                                      andMessage:(NSString *)message;
 
 
-#warning WORK ON THESE TWO METHODS FOR LOGIN OPTIMIZATION
+#warning WORK ON THESE TWO METHODS FOR LOGIN OPTIMIZATION ON V2
 //+ (UIAlertController *)errorHandleAndLoginAlerController:(UITextField *)usernameTextField
 //                                       passwordTextField:(UITextField *)passwordTextField;
 

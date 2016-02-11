@@ -74,9 +74,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="152" y="35" width="58" height="22"/>
-                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9f-No-bIP">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -248,7 +245,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.71928409849999997" green="0.1682085022" blue="0.15946099599999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="0BL-cy-qZu">
                                         <variation key="widthClass=compact" constant="220"/>
@@ -299,7 +296,7 @@
                                     <segment title="Likes"/>
                                     <segment title="Following"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="8Zc-5q-RFn"/>
@@ -400,12 +397,12 @@
                         <outlet property="segmentControl" destination="yCf-yp-o1p" id="8EE-z8-DY9"/>
                         <outlet property="tableView" destination="Ysa-uC-OGc" id="9r2-04-AaL"/>
                         <segue destination="Z6f-o3-P5v" kind="show" identifier="articleViewSegue" id="ejF-5J-0pn"/>
-                        <segue destination="3HV-af-DD7" kind="show" identifier="toProfileVC" id="YqA-TM-9eX"/>
+                        <segue destination="3HV-af-DD7" kind="show" identifier="profileViewSegue" id="YqA-TM-9eX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMN-lW-Ah6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.5" y="1633"/>
+            <point key="canvasLocation" x="39" y="1135"/>
         </scene>
         <!--News-->
         <scene sceneID="fnS-AN-AnA">
@@ -483,6 +480,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="73x-yg-Gc3" id="uyq-qw-atY"/>
                                     <outlet property="delegate" destination="73x-yg-Gc3" id="9qd-g2-YnG"/>
@@ -530,6 +530,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="OZ9-oa-WgJ" id="9qd-sr-19z"/>
                         <segue destination="Z6f-o3-P5v" kind="show" identifier="toWebSegue" id="AFX-Kz-V6D"/>
@@ -537,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ep-Xl-MUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="-192"/>
+            <point key="canvasLocation" x="-222" y="404"/>
         </scene>
         <!--Web Article View Controller-->
         <scene sceneID="WvQ-g0-qau">
@@ -607,7 +608,9 @@
                                     <constraint firstAttribute="width" constant="69" id="Hxk-D6-wjn"/>
                                     <constraint firstAttribute="height" constant="30" id="rgc-dv-XNn"/>
                                 </constraints>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Hxk-D6-wjn"/>
@@ -700,7 +703,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71928409849999997" green="0.1682085022" blue="0.15946099599999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="n8v-VN-ZrE" secondAttribute="trailing" constant="-20" id="0vG-T9-0ji"/>
                             <constraint firstItem="n29-la-qUb" firstAttribute="top" secondItem="Xmn-zw-rEP" secondAttribute="bottom" constant="9" id="4lm-bp-czj"/>
@@ -783,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nb0-hy-2ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="506"/>
+            <point key="canvasLocation" x="1290" y="376"/>
         </scene>
         <!--Search Web View Controller-->
         <scene sceneID="D9g-YI-Swc">
@@ -856,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYp-0g-e3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3027" y="800"/>
+            <point key="canvasLocation" x="1407" y="1990"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ihd-EF-gbb">
@@ -1070,7 +1073,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ct1-1B-WPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271" y="1568"/>
+            <point key="canvasLocation" x="1290" y="1202"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="RNn-dH-feF">
@@ -1381,7 +1384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uB-lO-VT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428" y="-125"/>
+            <point key="canvasLocation" x="-4302" y="175"/>
         </scene>
         <!--Inital View Controller-->
         <scene sceneID="0rb-R4-504">
@@ -1395,29 +1398,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hU-rt-uGj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="249" y="506" width="78" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="8M3-JF-SNx" kind="show" identifier="toSignUpViewSegue" id="fbD-Nc-rTr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SD-0Sa">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BGY-fc-cfo"/>
+                                    <constraint firstAttribute="width" constant="78" id="XGT-4j-Jp9">
+                                        <variation key="widthClass=compact" constant="240"/>
+                                    </constraint>
+                                </constraints>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="506" width="78" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BGY-fc-cfo"/>
+                                        <exclude reference="XGT-4j-Jp9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BGY-fc-cfo"/>
+                                        <exclude reference="XGT-4j-Jp9"/>
+                                    </mask>
                                 </variation>
                                 <connections>
                                     <segue destination="VZm-EW-XMW" kind="show" identifier="toLogInSegue" id="QgL-E2-wee"/>
@@ -1426,25 +1430,127 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-UV-tAn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="166" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1uN-ES-X6P"/>
+                                    <constraint firstAttribute="width" constant="240" id="hcL-L7-xD0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1uN-ES-X6P"/>
+                                        <exclude reference="hcL-L7-xD0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1uN-ES-X6P"/>
+                                        <include reference="hcL-L7-xD0"/>
+                                    </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hU-rt-uGj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iYY-uf-6L4"/>
+                                    <constraint firstAttribute="width" constant="78" id="qpF-sq-N3Y">
+                                        <variation key="widthClass=compact" constant="240"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iYY-uf-6L4"/>
+                                        <exclude reference="qpF-sq-N3Y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iYY-uf-6L4"/>
+                                        <exclude reference="qpF-sq-N3Y"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="8M3-JF-SNx" kind="show" identifier="toSignUpViewSegue" id="fbD-Nc-rTr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0hU-rt-uGj" firstAttribute="top" secondItem="jny-SD-0Sa" secondAttribute="bottom" constant="8" id="01g-tX-1hc"/>
+                            <constraint firstItem="jny-SD-0Sa" firstAttribute="leading" secondItem="khG-4E-3fU" secondAttribute="leadingMargin" constant="60" id="4cF-xR-7db"/>
+                            <constraint firstItem="jny-SD-0Sa" firstAttribute="top" secondItem="gEt-UV-tAn" secondAttribute="bottom" constant="21" id="4vl-Ci-IuZ">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="0hU-rt-uGj" secondAttribute="trailing" constant="60" id="Du4-pF-3xE"/>
+                            <constraint firstItem="jny-SD-0Sa" firstAttribute="top" secondItem="gEt-UV-tAn" secondAttribute="bottom" constant="72" id="FfG-q2-WXy">
+                                <variation key="widthClass=compact" constant="21"/>
+                            </constraint>
+                            <constraint firstItem="0hU-rt-uGj" firstAttribute="top" secondItem="jny-SD-0Sa" secondAttribute="bottom" constant="8" id="Nx6-Ff-OQD"/>
+                            <constraint firstItem="gEt-UV-tAn" firstAttribute="centerX" secondItem="khG-4E-3fU" secondAttribute="centerX" id="USO-5u-WWA"/>
+                            <constraint firstItem="0hU-rt-uGj" firstAttribute="leading" secondItem="jny-SD-0Sa" secondAttribute="trailing" constant="48" id="VIo-U5-Mc6"/>
+                            <constraint firstItem="0hU-rt-uGj" firstAttribute="top" secondItem="gEt-UV-tAn" secondAttribute="bottom" constant="72" id="WAe-nY-Nnm">
+                                <variation key="widthClass=compact" constant="59"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="jny-SD-0Sa" secondAttribute="trailing" constant="60" id="WDC-Ly-Lmp"/>
+                            <constraint firstItem="0hU-rt-uGj" firstAttribute="leading" secondItem="khG-4E-3fU" secondAttribute="leadingMargin" constant="60" id="X40-Vu-YSk"/>
+                            <constraint firstItem="jny-SD-0Sa" firstAttribute="leading" secondItem="khG-4E-3fU" secondAttribute="leadingMargin" constant="80" id="aVM-tV-RL4">
+                                <variation key="widthClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="0hU-rt-uGj" secondAttribute="trailing" constant="76" id="pya-DD-09F">
+                                <variation key="widthClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="gEt-UV-tAn" firstAttribute="centerY" secondItem="khG-4E-3fU" secondAttribute="centerY" id="vwz-md-3X8">
+                                <variation key="widthClass=compact" constant="-14"/>
+                            </constraint>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="0hU-rt-uGj"/>
                                 <exclude reference="jny-SD-0Sa"/>
                                 <exclude reference="gEt-UV-tAn"/>
+                                <exclude reference="0hU-rt-uGj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="USO-5u-WWA"/>
+                                <exclude reference="vwz-md-3X8"/>
+                                <exclude reference="4cF-xR-7db"/>
+                                <exclude reference="4vl-Ci-IuZ"/>
+                                <exclude reference="FfG-q2-WXy"/>
+                                <exclude reference="WDC-Ly-Lmp"/>
+                                <exclude reference="aVM-tV-RL4"/>
+                                <exclude reference="01g-tX-1hc"/>
+                                <exclude reference="Du4-pF-3xE"/>
+                                <exclude reference="Nx6-Ff-OQD"/>
+                                <exclude reference="VIo-U5-Mc6"/>
+                                <exclude reference="WAe-nY-Nnm"/>
+                                <exclude reference="X40-Vu-YSk"/>
+                                <exclude reference="pya-DD-09F"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="0hU-rt-uGj"/>
                                 <include reference="jny-SD-0Sa"/>
                                 <include reference="gEt-UV-tAn"/>
+                                <include reference="0hU-rt-uGj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="USO-5u-WWA"/>
+                                <include reference="vwz-md-3X8"/>
+                                <include reference="4cF-xR-7db"/>
+                                <include reference="4vl-Ci-IuZ"/>
+                                <exclude reference="FfG-q2-WXy"/>
+                                <include reference="WDC-Ly-Lmp"/>
+                                <exclude reference="aVM-tV-RL4"/>
+                                <exclude reference="01g-tX-1hc"/>
+                                <include reference="Du4-pF-3xE"/>
+                                <include reference="Nx6-Ff-OQD"/>
+                                <exclude reference="VIo-U5-Mc6"/>
+                                <exclude reference="WAe-nY-Nnm"/>
+                                <include reference="X40-Vu-YSk"/>
+                                <exclude reference="pya-DD-09F"/>
                             </mask>
                         </variation>
                     </view>
@@ -1456,7 +1562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oom-iz-Dni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2169" y="840"/>
+            <point key="canvasLocation" x="-5314.5" y="1616"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Axg-KU-asN">
@@ -1648,7 +1754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVl-4h-xNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1548" y="1612"/>
+            <point key="canvasLocation" x="-4422" y="2888"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yFu-Nm-EuJ">
@@ -1669,7 +1775,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMg-VT-TuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-994.5" y="627"/>
+            <point key="canvasLocation" x="-3748.5" y="1671"/>
         </scene>
         <!--Add News View Controller-->
         <scene sceneID="j1k-ip-pzV">
@@ -1699,7 +1805,8 @@
                                         <exclude reference="xCR-yk-TZl"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="351" width="400" height="30"/>
                                     <mask key="constraints">
                                         <include reference="IzM-zw-DSe"/>
                                         <include reference="xCR-yk-TZl"/>
@@ -1722,7 +1829,8 @@
                                         <exclude reference="flm-2T-2RX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="458" width="400" height="30"/>
                                     <mask key="constraints">
                                         <include reference="SuM-DN-Rcg"/>
                                         <include reference="flm-2T-2RX"/>
@@ -1745,7 +1853,8 @@
                                         <exclude reference="iPI-wM-Uw8"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="383" width="400" height="73"/>
                                     <mask key="constraints">
                                         <include reference="T7S-xn-TtS"/>
                                         <include reference="iPI-wM-Uw8"/>
@@ -1768,7 +1877,8 @@
                                         <exclude reference="AK7-kV-eu3"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="253"/>
                                     <mask key="constraints">
                                         <include reference="8pU-xT-uys"/>
                                         <include reference="AK7-kV-eu3"/>
@@ -1789,7 +1899,8 @@
                                         <exclude reference="40A-vF-FXn"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="319" width="400" height="30"/>
                                     <mask key="constraints">
                                         <include reference="40A-vF-FXn"/>
                                     </mask>
@@ -1812,7 +1923,8 @@
                                         <exclude reference="stx-pt-obL"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="132" y="506" width="137" height="42"/>
                                     <mask key="constraints">
                                         <include reference="0YQ-4P-3fu"/>
                                         <include reference="stx-pt-obL"/>
@@ -1828,6 +1940,9 @@
                                 <state key="normal" title="Add Image">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="253"/>
+                                </variation>
                                 <connections>
                                     <action selector="addImageOnButtonPressed:" destination="pFn-Gl-4WH" eventType="touchUpInside" id="d6P-8E-mjB"/>
                                 </connections>
@@ -1951,7 +2066,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjc-2V-8wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3027" y="-564"/>
+            <point key="canvasLocation" x="1290" y="-364"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mEU-tT-qu6">
@@ -2121,7 +2236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKZ-Hv-qSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="2744"/>
+            <point key="canvasLocation" x="-2028" y="3198"/>
         </scene>
         <!--Privacy View Controller-->
         <scene sceneID="xUh-0e-HDM">
@@ -2162,7 +2277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKQ-uU-DQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2214" y="2154"/>
+            <point key="canvasLocation" x="-1164" y="3954"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="JuD-fq-1PN">
@@ -2383,7 +2498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msn-M0-Ppc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="1857"/>
+            <point key="canvasLocation" x="-4023" y="3788"/>
         </scene>
         <!--Search-->
         <scene sceneID="8OZ-kM-hnH">
@@ -2455,7 +2570,7 @@
                                     <segment title="Article Name"/>
                                     <segment title="Username"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="M4v-cS-iNo"/>
@@ -2585,14 +2700,15 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="817.5" y="811"/>
+            <point key="canvasLocation" x="46.5" y="1895"/>
         </scene>
         <!--News-->
         <scene sceneID="Yhh-bf-0Y0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="sgq-ml-klM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sgq-ml-klM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="news feed" selectedImage="news feed" id="pec-MJ-0iF"/>
                     <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C6S-Z3-lM7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2605,7 +2721,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy5-89-ERS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-192"/>
+            <point key="canvasLocation" x="-2931" y="376"/>
         </scene>
         <!--Ritual-->
         <scene sceneID="Z6E-z2-ih2">
@@ -2625,7 +2741,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQp-WI-luc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="468"/>
+            <point key="canvasLocation" x="-2931" y="1175"/>
         </scene>
         <!--Search-->
         <scene sceneID="pr4-yP-W3X">
@@ -2645,7 +2761,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6Y-Sa-I5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="1312"/>
+            <point key="canvasLocation" x="-1006.5" y="2744"/>
         </scene>
         <!--Settings-->
         <scene sceneID="nrc-RQ-Bdl">
@@ -2665,7 +2781,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiC-Bs-O7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="2664"/>
+            <point key="canvasLocation" x="-2919" y="2016"/>
         </scene>
     </scenes>
     <resources>
@@ -2675,9 +2791,9 @@
         <image name="news feed" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jS1-TP-9zl"/>
-        <segue reference="QgL-E2-wee"/>
-        <segue reference="fbD-Nc-rTr"/>
-        <segue reference="ejF-5J-0pn"/>
+        <segue reference="sEV-mS-mvd"/>
+        <segue reference="AFX-Kz-V6D"/>
+        <segue reference="2Ra-wB-mMS"/>
+        <segue reference="lFx-oX-qma"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchWebViewController.h"
 #import "WebArticleViewController.h"
+#import "ProfileViewController.h"
 #import "BackendFunctions.h"
 #import <Parse/Parse.h>
 #import "Article.h"
@@ -139,9 +140,10 @@
         NSLog(@"selected article: %@", article);
         [self performSegueWithIdentifier:@"toWebViewSegue" sender:article];
     }
-    else
+    else if (_segmentControl.selectedSegmentIndex == 1)
     {
-        nil;
+        User *user = _displayArray[indexPath.row];
+        [self performSegueWithIdentifier:@"profileViewSegue" sender:user];
     }
 }
 
@@ -191,6 +193,13 @@
         WebArticleViewController *vc = [segue destinationViewController];
         NSLog(@"passed article.. before segue: %@", article);
         vc.article = article;
+    }
+    else if ([segue.identifier isEqual:@"profileViewSegue"])
+    {
+        User *user = (User *)sender;
+        ProfileViewController *vc = [segue destinationViewController];
+        NSLog(@"got user %@", user);
+        vc.user = user;
     }
 }
 

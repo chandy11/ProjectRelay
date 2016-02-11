@@ -379,14 +379,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 
-    if ([segue.identifier isEqual:@"articleViewSegue"])
+    if (_segmentControl.selectedSegmentIndex == 0) //&&[segue.identifier isEqual:@"articleViewSegue"])
     {
         Article *article = (Article *)sender;
         WebArticleViewController *vc = [segue destinationViewController];
         NSLog(@"passed article.. before segue: %@", article);
         vc.article = article;
     }
-    else if ([segue.identifier isEqual:@"profileViewSegue"])
+    else if (_segmentControl.selectedSegmentIndex == 1) //&&[segue.identifier isEqual:@"profileViewSegue"])
     {
         User *user = (User *)sender;
         ProfileViewController *vc = [segue destinationViewController];
