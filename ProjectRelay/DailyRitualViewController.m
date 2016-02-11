@@ -226,8 +226,10 @@
         
         
         cell.titleLable.text = _articles.title;
+            cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
         cell.usernameLabel.text = @""; 
         cell.descriptionLabel.text = _articles.descriptionText;
+        cell.descriptionLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
         cell.backgroundColor = [UIColor lightGrayColor];
 
     }
@@ -259,7 +261,9 @@
         }];
         
         cell.titleLable.text = @"";
+        cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
         cell.usernameLabel.text = _user.username;
+        cell.usernameLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
         cell.descriptionLabel.text = @"";
         cell.backgroundColor = [UIColor lightGrayColor];
     }

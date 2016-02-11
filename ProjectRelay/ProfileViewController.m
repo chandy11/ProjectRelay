@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "WebArticleViewController.h"
 #import "Article.h"
 #import "ArticleTableViewCell.h"
 #import "kColorConstants.h"
@@ -147,7 +148,7 @@
 //             [cell.articleImage.layer setBorderWidth:4.3];
 //             [cell.articleImage.layer setCornerRadius:30.0f];
 //             [cell.articleImage.layer setMasksToBounds:YES];
-             cell.imageView.image = image;
+             cell.articleImage.image = image;
          }
          else
          {
@@ -164,11 +165,57 @@
      {
          //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];;
      }];
+    
+    cell.titleLable.text = _articles.title;
+    cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+    cell.usernameLabel.text = @"";
+    cell.usernameLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+    cell.descriptionLabel.text = _articles.descriptionText;
+    cell.descriptionLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+    cell.backgroundColor = [UIColor lightGrayColor];
 
 
     return cell;
 
 }
+- (IBAction)didFollowUserOnButtonPressed:(id)sender
+{
+
+    User *cUser = [User currentUser];
+    
+    PFRelation *relation = [cUser relationForKey:@"following"];
+    [relation addObject:_user];
+    
+    [cUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error)
+     {
+         if (!error && succeeded)
+         {
+             [cUser save];
+             NSLog(@"now following %@ !",_user);
+         }
+         else
+         {
+             [RKDropdownAlert title:@"Something Went Wrong!"
+                            message:error.localizedDescription
+                    backgroundColor:[UIColor redColor]
+                          textColor:[UIColor whiteColor]
+                               time:1.0];
+         }
+     }];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Article *article = _likesArray[indexPath.row];
+    NSLog(@"selected article: %@", article);
+    [self performSegueWithIdentifier:@"toWebSegue" sender:article];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -179,6 +226,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    Article *article = (Article *)sender;
+    WebArticleViewController *vc = [segue destinationViewController];
+    vc.article = article;
 }
 
 
