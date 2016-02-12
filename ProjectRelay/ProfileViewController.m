@@ -178,7 +178,7 @@
     return cell;
 
 }
-- (IBAction)didFollowUserOnButtonPressed:(id)sender
+- (IBAction)didFollowUserOnButtonPressed:(UIButton *)sender
 {
 
     User *cUser = [User currentUser];
