@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIButton *followButton;
 @property (strong, nonatomic) NSMutableArray *likesArray;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UIImage *profileImage;
@@ -184,24 +185,27 @@
     User *cUser = [User currentUser];
     
     PFRelation *relation = [cUser relationForKey:@"following"];
-    [relation addObject:_user];
     
-    [cUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error)
-     {
-         if (!error && succeeded)
+    [relation addObject:_user];
+        
+        [cUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error)
          {
-             [cUser save];
-             NSLog(@"now following %@ !",_user);
-         }
-         else
-         {
-             [RKDropdownAlert title:@"Something Went Wrong!"
-                            message:error.localizedDescription
-                    backgroundColor:[UIColor redColor]
-                          textColor:[UIColor whiteColor]
-                               time:1.0];
-         }
-     }];
+             if (!error && succeeded)
+             {
+                 [cUser save];
+                 NSLog(@"now following %@ !",_user);
+             }
+             else
+             {
+                 [RKDropdownAlert title:@"Something Went Wrong!"
+                                message:error.localizedDescription
+                        backgroundColor:[UIColor redColor]
+                              textColor:[UIColor whiteColor]
+                                   time:1.0];
+             }
+         }];
+    [_followButton setTitle:@"Unfollow" forState:UIControlStateNormal];
+
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -1250,6 +1250,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="followButton" destination="zJT-e9-cWZ" id="1Bb-He-9Uf"/>
                         <outlet property="profileImageView" destination="dj6-K6-7Cq" id="0ic-7E-5Du"/>
                         <outlet property="tableView" destination="vV6-qF-fcm" id="5fa-FX-44r"/>
                         <segue destination="Z6f-o3-P5v" kind="show" identifier="toWebSegue" id="vO8-1d-DMP"/>
