@@ -13,7 +13,6 @@
 #import "JVFloatLabeledTextField.h"
 #import "kColorConstants.h"
 
-
 @interface AddNewsViewController () <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *articleTitleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *articleLinkTextField;
@@ -136,6 +135,9 @@
 
 - (IBAction)articleSubmittedOnButtonPressed:(UIButton *)sender
 {
+    
+    CGImageRef cgref = [_addPhotoImage CGImage];
+    CIImage *ciref = [_addPhotoImage CIImage];
 
     if ([self.articleTitleTextField.text isEqualToString:@""])
     {
@@ -151,6 +153,11 @@
     else if ([self.descriptionTextView.text isEqualToString:@""])
     {
         _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Did You Leave The Description Blank?"];
+        [self presentViewController:_alert animated:YES completion:nil];
+    }
+    else if (cgref == nil && ciref == NULL)
+    {
+        _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Make This Pretty! Put A Photo!"];
         [self presentViewController:_alert animated:YES completion:nil];
     }
     else

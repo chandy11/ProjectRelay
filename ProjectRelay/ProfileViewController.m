@@ -205,6 +205,29 @@
              }
          }];
     [_followButton setTitle:@"Unfollow" forState:UIControlStateNormal];
+    
+    if ([_followButton.titleLabel.text isEqualToString:@"Unfollow"])
+    {
+        [relation removeObject:_user];
+        
+        [cUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error)
+        {
+            if (!error && succeeded)
+            {
+                [cUser save];
+                NSLog(@"now unfollowed %@", _user);
+            }
+            else
+            {
+                [RKDropdownAlert title:@"Something Went Wrong!"
+                               message:error.localizedDescription
+                       backgroundColor:[UIColor redColor]
+                             textColor:[UIColor whiteColor]
+                                  time:1.0];
+            }
+        }];
+    [_followButton setTitle:@"Follow" forState:UIControlStateNormal];
+    }
 
 }
 
