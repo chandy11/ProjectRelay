@@ -45,13 +45,8 @@
     [_webView.layer setBorderWidth:1.3];
     [_webView.layer setCornerRadius:5.0f];
     [_webView.layer setMasksToBounds:YES];
- //   _contentArray = [NSMutableArray new];
     
     [self loadWebsite];
-  //  [self queryAll];
-   // [self commentQuery];
-   // [self userQuery];
-   // [self commentAndUserArray];
     [self setDelegates];
     
     
@@ -96,7 +91,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

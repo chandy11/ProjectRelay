@@ -125,7 +125,6 @@
 
 - (void)reloadTableView
 {
-    //Reloads data into array and stops refreshing
     [_tableView reloadData];
     [_refreshControl endRefreshing];
 }
@@ -213,7 +212,7 @@
     if (indexPath != nil)
     {
         [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
-        //NSLog(@"button tapped");
+        NSLog(@"button tapped");
     }
 }
 

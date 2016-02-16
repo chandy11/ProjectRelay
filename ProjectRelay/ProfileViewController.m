@@ -144,11 +144,6 @@
          if (!error)
          {
              UIImage *image = [UIImage imageWithData:data];
-//             cell.articleImage.image = image;
-//             [cell.articleImage.layer setBorderColor:[[kColorConstants cloudsWithAlpha:1.0]CGColor]];
-//             [cell.articleImage.layer setBorderWidth:4.3];
-//             [cell.articleImage.layer setCornerRadius:30.0f];
-//             [cell.articleImage.layer setMasksToBounds:YES];
              cell.articleImage.image = image;
          }
          else
