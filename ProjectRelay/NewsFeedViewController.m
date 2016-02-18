@@ -18,7 +18,7 @@
 #import "kColorConstants.h"
 
 
-@interface NewsFeedViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface NewsFeedViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (strong, nonatomic) NSMutableArray *newsFeedArray;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;

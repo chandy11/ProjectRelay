@@ -25,8 +25,6 @@
 @property (strong, nonatomic) UIImage *articleImage;
 @property (strong, nonatomic) Article *articles;
 
-
-
 @end
 
 @implementation ProfileViewController
@@ -48,8 +46,6 @@
     [self getUserImage];
     [_tableView reloadData];
     [self useRefreshControl];
-
-
 
 }
 
@@ -113,7 +109,6 @@
      }];
     
 }
-
 
 #pragma
 #pragma mark - UI Eelements
