@@ -13,14 +13,13 @@
 #import "JVFloatLabeledTextField.h"
 #import "kColorConstants.h"
 
-@interface AddNewsViewController () <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, UINavigationControllerDelegate>
+@interface AddNewsViewController () <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *articleTitleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *articleLinkTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addTagTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) IBOutlet UIImageView *articleImageView;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UIAlertController *alert;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIImage *addPhotoImage;
@@ -89,7 +88,7 @@
     _addTagTextField.delegate = self;
     _descriptionTextView.delegate = self;
     _imagePicker.delegate = self;
-    _scrollView.delegate = self;
+//    _scrollView.delegate = self;
 }
 
 - (void)hideKeyboard
@@ -192,6 +191,13 @@
                                        tagName:_addTagTextField];
     }
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self hideKeyboard];
+    return YES;
+}
+
 
 #pragma
 #pragma mark - Keyboard Stuff

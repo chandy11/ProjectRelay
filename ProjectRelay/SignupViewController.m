@@ -144,7 +144,7 @@
         _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"You Forgot To Put In Your Password"];
         [self presentViewController:_alert animated:YES completion:nil];
     }
-    else if ([_confirmPasswordTextField.text isEqualToString:_passwordTextField.text] == [_confirmPasswordTextField.text isEqualToString:@""])
+    else if (![_confirmPasswordTextField.text isEqualToString:_passwordTextField.text] || [_confirmPasswordTextField.text isEqualToString:@""])
     {
         _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Passwords Don't Match Yo!"];
         [self presentViewController:_alert animated:YES completion:nil];
