@@ -177,11 +177,11 @@
         _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Did You Leave The Description Blank?"];
         [self presentViewController:_alert animated:YES completion:nil];
     }
-    else if (cgref == nil && ciref == NULL)
-    {
-        _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Make This Pretty! Put A Photo!"];
-        [self presentViewController:_alert animated:YES completion:nil];
-    }
+//    else if (cgref == nil && ciref == NULL)
+//    {
+//        _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Make This Pretty! Put A Photo!"];
+//        [self presentViewController:_alert animated:YES completion:nil];
+//    }
     else
     {
         [BackendFunctions saveArticleWithTitle:_articleTitleTextField

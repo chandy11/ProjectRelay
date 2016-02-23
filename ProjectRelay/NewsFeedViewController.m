@@ -145,6 +145,8 @@
     cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
     cell.descriptionLabel.text = article.descriptionText;
     cell.descriptionLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
+//    cell.usernameLabel.text = ;
+    NSLog(@"%@", _newsFeedArray);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSeparatorStyleSingleLine;
     

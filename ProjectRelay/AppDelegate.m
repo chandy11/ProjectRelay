@@ -16,7 +16,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//
+//    UIViewController *initialVC =[storyboard instantiateViewControllerWithIdentifier:@"initialVC"];
+//
+//    UIViewController *newsVC =[storyboard instantiateViewControllerWithIdentifier:@"newsVC"];
+
+
 
     [Parse enableLocalDatastore];
 
@@ -24,10 +32,26 @@
     [Parse setApplicationId:@"tWz8lncQ6q2hihyBwW6GZPOu0acqZb4QEQrNpjWv"
                   clientKey:@"YVQNILMBdT6Hvt3djjNBtsLlnl9vId4jrjSfCDaf"];
 
+
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
+
+//    PFUser *currentUser = [PFUser currentUser];
+//    if (currentUser)
+//    {
+//        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//        self.window.rootViewController = newsVC;
+//    } else
+//    {
+//        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//        self.window.rootViewController = initialVC;
+//    }
+//
+//    [self.window makeKeyAndVisible];
     return YES;
+
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
