@@ -206,14 +206,21 @@
 {
     Article *article = [Article new];
     User *cUser = [User currentUser];
-    
-    NSData *imageData = UIImagePNGRepresentation(image);
-    PFFile *imageFile = [PFFile fileWithName:@"RelayProfilePicture.png" data:imageData];
+
+    if (image != nil)
+    {
+        NSData *imageData = UIImagePNGRepresentation(image);
+        PFFile *imageFile = [PFFile fileWithName:@"RelayProfilePicture.png" data:imageData];
+        article.articleImage = imageFile;
+    }
+    else
+    {
+        nil;
+    }
     
     article.title = title.text;
     article.descriptionText = description.text;
     article.url = url.text;
-    article.articleImage = imageFile;
     article[@"author"] = cUser;
     
     [article saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error)

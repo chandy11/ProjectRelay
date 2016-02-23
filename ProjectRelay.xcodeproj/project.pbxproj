@@ -63,6 +63,7 @@
 		57E941081C47487700612F43 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E941071C47487700612F43 /* CommentCell.m */; };
 		57F13AAC1C3866D000A7B5A8 /* InitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F13AAB1C3866D000A7B5A8 /* InitalViewController.m */; };
 		85084DE15969A6B585D233D1 /* libPods-ProjectRelay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B28A2C3799CA9495E27A8C5B /* libPods-ProjectRelay.a */; };
+		E141FD871C7C125600DF1498 /* tabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E141FD861C7C125600DF1498 /* tabBarController.m */; };
 		E190CD8F1C66638C00639992 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E190CD8E1C66638C00639992 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,8 @@
 		57F13AAB1C3866D000A7B5A8 /* InitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitalViewController.m; sourceTree = "<group>"; };
 		9336555E0D760AA1D309F0F7 /* Pods-ProjectRelay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRelay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRelay/Pods-ProjectRelay.debug.xcconfig"; sourceTree = "<group>"; };
 		B28A2C3799CA9495E27A8C5B /* libPods-ProjectRelay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectRelay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E141FD851C7C125600DF1498 /* tabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabBarController.h; sourceTree = "<group>"; };
+		E141FD861C7C125600DF1498 /* tabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabBarController.m; sourceTree = "<group>"; };
 		E190CD8D1C66638C00639992 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E190CD8E1C66638C00639992 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +215,8 @@
 				576F414B1C19478A00477D49 /* User.m */,
 				576F41471C19462000477D49 /* Article.h */,
 				576F41481C19462000477D49 /* Article.m */,
+				E141FD851C7C125600DF1498 /* tabBarController.h */,
+				E141FD861C7C125600DF1498 /* tabBarController.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BAE9EB1C043E8400DE8AE0 /* DailyRitualViewController.m in Sources */,
+				E141FD871C7C125600DF1498 /* tabBarController.m in Sources */,
 				576F41491C19462000477D49 /* Article.m in Sources */,
 				57399A031C16CFAA00A85D5F /* RootNavigationController.m in Sources */,
 				57BAE9E81C043E8400DE8AE0 /* AppDelegate.m in Sources */,

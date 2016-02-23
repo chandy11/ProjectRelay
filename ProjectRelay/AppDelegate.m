@@ -18,11 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//
-//    UIViewController *initialVC =[storyboard instantiateViewControllerWithIdentifier:@"initialVC"];
-//
-//    UIViewController *newsVC =[storyboard instantiateViewControllerWithIdentifier:@"newsVC"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    UIViewController *initialVC =[storyboard instantiateViewControllerWithIdentifier:@"initialVC"];
+
+    UIViewController *tabBar=[storyboard instantiateViewControllerWithIdentifier:@"newsVC"];
 
 
 
@@ -37,18 +37,18 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
 
-//    PFUser *currentUser = [PFUser currentUser];
-//    if (currentUser)
-//    {
-//        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//        self.window.rootViewController = newsVC;
-//    } else
-//    {
-//        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//        self.window.rootViewController = initialVC;
-//    }
-//
-//    [self.window makeKeyAndVisible];
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser)
+    {
+        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        self.window.rootViewController = tabBar;
+    } else
+    {
+        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        self.window.rootViewController = initialVC;
+    }
+
+    [self.window makeKeyAndVisible];
     return YES;
 
     
