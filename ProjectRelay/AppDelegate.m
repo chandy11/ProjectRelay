@@ -22,9 +22,7 @@
 
     UIViewController *initialVC =[storyboard instantiateViewControllerWithIdentifier:@"initialVC"];
 
-    UIViewController *tabBar=[storyboard instantiateViewControllerWithIdentifier:@"newsVC"];
-
-
+    UITabBarController *tabBar =[storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
 
     [Parse enableLocalDatastore];
 

@@ -762,7 +762,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="644"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="73x-yg-Gc3" id="uyq-qw-atY"/>
@@ -776,7 +776,11 @@
                             <constraint firstItem="OZ9-oa-WgJ" firstAttribute="bottom" secondItem="pZB-fR-l6C" secondAttribute="top" id="47X-8d-4IT">
                                 <variation key="widthClass=compact" constant="44"/>
                             </constraint>
+                            <constraint firstItem="OZ9-oa-WgJ" firstAttribute="top" secondItem="KWd-HS-9Ya" secondAttribute="topMargin" id="Eab-2O-9oH"/>
+                            <constraint firstItem="pZB-fR-l6C" firstAttribute="top" secondItem="OZ9-oa-WgJ" secondAttribute="bottom" id="KfW-YY-XOH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OZ9-oa-WgJ" secondAttribute="trailing" constant="-20" id="QXa-dC-tQH"/>
                             <constraint firstItem="OZ9-oa-WgJ" firstAttribute="leading" secondItem="KWd-HS-9Ya" secondAttribute="leading" id="SiS-JK-WQg"/>
+                            <constraint firstItem="OZ9-oa-WgJ" firstAttribute="leading" secondItem="KWd-HS-9Ya" secondAttribute="leadingMargin" constant="-20" id="acs-pj-lsb"/>
                             <constraint firstItem="OZ9-oa-WgJ" firstAttribute="top" secondItem="KWd-HS-9Ya" secondAttribute="top" id="rcX-AJ-Foh"/>
                             <constraint firstAttribute="trailing" secondItem="OZ9-oa-WgJ" secondAttribute="trailing" id="v1u-6R-b4J"/>
                         </constraints>
@@ -786,9 +790,13 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="47X-8d-4IT"/>
+                                <exclude reference="Eab-2O-9oH"/>
+                                <exclude reference="QXa-dC-tQH"/>
                                 <exclude reference="SiS-JK-WQg"/>
+                                <exclude reference="acs-pj-lsb"/>
                                 <exclude reference="rcX-AJ-Foh"/>
                                 <exclude reference="v1u-6R-b4J"/>
+                                <exclude reference="KfW-YY-XOH"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -796,10 +804,14 @@
                                 <include reference="OZ9-oa-WgJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="47X-8d-4IT"/>
-                                <include reference="SiS-JK-WQg"/>
-                                <include reference="rcX-AJ-Foh"/>
-                                <include reference="v1u-6R-b4J"/>
+                                <exclude reference="47X-8d-4IT"/>
+                                <include reference="Eab-2O-9oH"/>
+                                <include reference="QXa-dC-tQH"/>
+                                <exclude reference="SiS-JK-WQg"/>
+                                <include reference="acs-pj-lsb"/>
+                                <exclude reference="rcX-AJ-Foh"/>
+                                <exclude reference="v1u-6R-b4J"/>
+                                <include reference="KfW-YY-XOH"/>
                             </mask>
                         </variation>
                     </view>
@@ -811,7 +823,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="OZ9-oa-WgJ" id="9qd-sr-19z"/>
                         <segue destination="Z6f-o3-P5v" kind="show" identifier="toWebSegue" id="AFX-Kz-V6D"/>

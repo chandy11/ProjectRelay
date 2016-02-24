@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];    
     [self showWelcomeMessage];
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -45,7 +46,9 @@
     
     [self useRefreshControl];
     [self setNavBar];
+
 }
+
 
 #pragma
 #pragma mark - UI Eelements

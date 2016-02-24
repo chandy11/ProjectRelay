@@ -28,6 +28,7 @@
 @property (strong, nonatomic) Article *article;
 @property (strong, nonatomic) PFObject *tag;
 
+
 #define kOFFSET_FOR_KEYBOARD 80.0
 
 @end
@@ -39,6 +40,8 @@
     //Degister for the notification.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+//-vieww
 
 - (void)viewDidLoad
 {
