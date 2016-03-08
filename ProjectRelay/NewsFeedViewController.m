@@ -16,6 +16,7 @@
 #import "RKDropdownAlert.h"
 #import "MBProgressHUD.h"
 #import "kColorConstants.h"
+#import "UIAssets.h"
 
 
 @interface NewsFeedViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
@@ -142,21 +143,8 @@
     // makes tableview cell
     ArticleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // set cell styling
-    cell.backgroundColor = [UIColor blackColor];
-    cell.titleLable.text = article.title;
-    cell.titleLable.textColor = [kColorConstants pomogranateWithAlpha:1.0];
-    cell.descriptionLabel.text = article.descriptionText;
-    cell.descriptionLabel.textColor = [kColorConstants pomogranateWithAlpha:1.0];
-//    cell.usernameLabel.text = ;
-    NSLog(@"%@", _newsFeedArray);
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.selectionStyle = UITableViewCellSeparatorStyleSingleLine;
-    
-    [cell.layer setBorderColor:[[kColorConstants silverWithAlpha:1.0] CGColor]];
-    [cell.layer setBorderWidth:1.3];
-    [cell.layer setCornerRadius:0.0f];
-    [cell.layer setMasksToBounds:YES];
+    // set cell styling    
+    [UIAssets setArticleCellStyling:cell withArticle:article];
 
     PFFile *file = article.articleImage;
     [file getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error)

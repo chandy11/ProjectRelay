@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570293581C8F21BE00589D30 /* UIAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 570293571C8F21BE00589D30 /* UIAssets.m */; };
 		57087EFE1C59697300FA3ADC /* kColorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 57087EFD1C59697300FA3ADC /* kColorConstants.m */; };
 		57399A031C16CFAA00A85D5F /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57399A021C16CFAA00A85D5F /* RootNavigationController.m */; };
 		57399A061C16E39F00A85D5F /* NewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57399A051C16E39F00A85D5F /* NewsFeedViewController.m */; };
@@ -79,6 +80,8 @@
 
 /* Begin PBXFileReference section */
 		5375BC00E77A48DDD5D6BD03 /* Pods-ProjectRelay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRelay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRelay/Pods-ProjectRelay.release.xcconfig"; sourceTree = "<group>"; };
+		570293561C8F21BE00589D30 /* UIAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAssets.h; sourceTree = "<group>"; };
+		570293571C8F21BE00589D30 /* UIAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAssets.m; sourceTree = "<group>"; };
 		57087EFC1C59697300FA3ADC /* kColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kColorConstants.h; path = ProjectRelay/kColorConstants.h; sourceTree = "<group>"; };
 		57087EFD1C59697300FA3ADC /* kColorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = kColorConstants.m; path = ProjectRelay/kColorConstants.m; sourceTree = "<group>"; };
 		57399A011C16CFAA00A85D5F /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				57087EFD1C59697300FA3ADC /* kColorConstants.m */,
 				576F413B1C19414C00477D49 /* BackendFunctions.h */,
 				576F413C1C19414C00477D49 /* BackendFunctions.m */,
+				570293561C8F21BE00589D30 /* UIAssets.h */,
+				570293571C8F21BE00589D30 /* UIAssets.m */,
 				576F414D1C198F5A00477D49 /* MaybeMethods.h */,
 				576F414E1C198F5A00477D49 /* MaybeMethods.m */,
 			);
@@ -633,6 +638,7 @@
 				576F41351C19401700477D49 /* SignupViewController.m in Sources */,
 				576F41321C19265D00477D49 /* WebArticleViewController.m in Sources */,
 				57399A091C16E3D000A85D5F /* SearchViewController.m in Sources */,
+				570293581C8F21BE00589D30 /* UIAssets.m in Sources */,
 				576F414C1C19478A00477D49 /* User.m in Sources */,
 				57BAE9E51C043E8400DE8AE0 /* main.m in Sources */,
 				57399A0C1C16E3FA00A85D5F /* SettingsViewController.m in Sources */,
