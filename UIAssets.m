@@ -15,7 +15,7 @@
     [navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor blackColor],
                                                                   NSFontAttributeName: [UIFont fontWithName:@"Avenir" size:20.0f]                                                                      }];
     [navigationController.navigationBar setBackgroundColor:[kColorConstants pomogranateWithAlpha:1.0]];
-    [navigationItem setTitle: @"Jammout"];
+    [navigationItem setTitle: @"Relay"];
 }
 
 + (void)setArticleCellStyling:(ArticleTableViewCell *)cell withArticle:(Article *)article

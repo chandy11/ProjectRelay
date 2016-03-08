@@ -56,10 +56,7 @@
 
 - (void)setNavBar
 {
-    [self.navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor blackColor],
-                                                                       NSFontAttributeName: [UIFont fontWithName:@"Avenir" size:20.0f]                                                                      }];
-    [self.navigationController.navigationBar setBackgroundColor:[kColorConstants pomogranateWithAlpha:1.0]];
-    [self.navigationItem setTitle: @"Relay"];
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)useRefreshControl
@@ -143,7 +140,7 @@
     // makes tableview cell
     ArticleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // set cell styling    
+    // set cell styling
     [UIAssets setArticleCellStyling:cell withArticle:article];
 
     PFFile *file = article.articleImage;
