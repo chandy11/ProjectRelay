@@ -12,6 +12,7 @@
 #import "Article.h"
 #import "JVFloatLabeledTextField.h"
 #import "kColorConstants.h"
+#import "UIAssets.h"
 
 @interface AddNewsViewController () <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *articleTitleTextField;
@@ -50,7 +51,8 @@
     _descriptionTextView.textColor = [UIColor lightGrayColor];
     _imagePicker = [UIImagePickerController new];
     [self.view bringSubviewToFront:_articleImageView];
-
+    
+    [self setNavBar];
     [self setDelegates];
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
@@ -58,6 +60,11 @@
     gestureRecognizer.cancelsTouchesInView = NO;
     //Register for Notifications and listen to "savedToParseSuccess" and perform a selector
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(successfullyPostedToParse) name:@"savedToParseSuccess" object:nil];
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -180,6 +187,8 @@
         _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Did You Leave The Description Blank?"];
         [self presentViewController:_alert animated:YES completion:nil];
     }
+//      UNCOMMENT TO REQUIRE IMAGES
+//
 //    else if (cgref == nil && ciref == NULL)
 //    {
 //        _alert = [BackendFunctions showDataEntryError:@"Error" withMessage:@"Make This Pretty! Put A Photo!"];

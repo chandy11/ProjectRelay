@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "BackendFunctions.h"
 #import "kColorConstants.h"
+#import "UIAssets.h"
 
 
 @interface SettingsViewController () <MFMailComposeViewControllerDelegate>
@@ -26,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setNavBar];
     self.view.backgroundColor = [UIColor grayColor];
     UIButton *privacyButton = _privacyButton;
     UIButton *contactButton = _contactButton;
@@ -41,6 +44,11 @@
     [logOutButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateNormal];
     [logOutButton setTitleColor:[kColorConstants pomogranateWithAlpha:1.0] forState:UIControlStateHighlighted];
 
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (IBAction)sendEmailAction:(UIButton *)sender

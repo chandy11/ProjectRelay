@@ -16,6 +16,7 @@
 #import "User.h"
 #import "RKDropdownAlert.h"
 #import "kColorConstants.h"
+#import "UIAssets.h"
 
 
 @interface SearchViewController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -42,6 +43,8 @@
     _searchBar.delegate = self;
     _displayArray = [NSMutableArray new];
     
+    [self setNavBar];
+    
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
@@ -60,6 +63,11 @@
 - (void)hideKeyboard
 {
     [_searchBar resignFirstResponder];
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 #pragma

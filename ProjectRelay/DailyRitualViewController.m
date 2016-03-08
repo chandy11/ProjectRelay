@@ -19,6 +19,7 @@
 #import "ArticleTableViewCell.h"
 #import "kColorConstants.h"
 #import "ProfileViewController.h"
+#import "UIAssets.h"
 
 @interface DailyRitualViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -65,10 +66,7 @@
 
 - (void)setNavBar
 {
-    [self.navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor blackColor],
-                                                                       NSFontAttributeName: [UIFont fontWithName:@"Avenir" size:20.0f]                                                                      }];
-    [self.navigationController.navigationBar setBackgroundColor:[kColorConstants pomogranateWithAlpha:1.0]];
-    [self.navigationItem setTitle: @"Relay"];
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)useRefreshControl

@@ -12,6 +12,7 @@
 #import "ArticleTableViewCell.h"
 #import "kColorConstants.h"
 #import "RKDropdownAlert.h"
+#import "UIAssets.h"
 
 
 @interface ProfileViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -40,6 +41,7 @@
     [_profileImageView.layer setMasksToBounds:YES];
     
     [self userLikesQuery];
+    [self setNavBar];
 
     _likesArray = [[NSMutableArray alloc]init];
 
@@ -47,6 +49,11 @@
     [_tableView reloadData];
     [self useRefreshControl];
 
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 #pragma

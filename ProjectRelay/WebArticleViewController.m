@@ -13,6 +13,7 @@
 #import "CommentCell.h"
 #import "User.h"
 #import "kColorConstants.h"
+#import "UIAssets.h"
 
 
 @interface WebArticleViewController () <UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
@@ -47,6 +48,7 @@
     [_webView.layer setMasksToBounds:YES];
     
     [self loadWebsite];
+    [self setNavBar];
     [self setDelegates];
     
     
@@ -67,6 +69,11 @@
     _contentDictionary = nil;
     
     [self queryAll];
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)loadWebsite

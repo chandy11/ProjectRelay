@@ -11,7 +11,7 @@
 #import "User.h"
 #import <Parse/Parse.h>
 #import "kColorConstants.h"
-
+#import "UIAssets.h"
 
 @interface EditProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -34,8 +34,14 @@
     [super viewDidLoad];
     _imagePicker = [UIImagePickerController new];
     _imagePicker.delegate = self;
+    [self setNavBar];
     UIButton *submitButton = _submitButton;
     submitButton.backgroundColor = [kColorConstants pomogranateWithAlpha:1.0];
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)didReceiveMemoryWarning

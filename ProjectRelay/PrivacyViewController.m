@@ -8,7 +8,7 @@
 
 #import "PrivacyViewController.h"
 #import "kColorConstants.h"
-
+#import "UIAssets.h"
 
 @interface PrivacyViewController ()
 
@@ -18,7 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavBar];
     // Do any additional setup after loading the view.
+}
+
+- (void)setNavBar
+{
+    [UIAssets setupNavbarOnNavbar:self.navigationController onNavigationItem:self.navigationItem];
 }
 
 - (void)didReceiveMemoryWarning {
