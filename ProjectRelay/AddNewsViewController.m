@@ -29,7 +29,6 @@
 @property (strong, nonatomic) Article *article;
 @property (strong, nonatomic) PFObject *tag;
 
-
 #define kOFFSET_FOR_KEYBOARD 80.0
 
 @end
@@ -41,8 +40,6 @@
     //Degister for the notification.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-//-vieww
 
 - (void)viewDidLoad
 {
@@ -73,7 +70,6 @@
     // register for keyboard notifications
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
 }
 
@@ -206,7 +202,20 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self hideKeyboard];
+    if (textField == _articleTitleTextField)
+    {
+        [_articleTitleTextField resignFirstResponder];
+        [_articleLinkTextField becomeFirstResponder];
+    }
+    else if (textField == _articleLinkTextField)
+    {
+        [_articleLinkTextField resignFirstResponder];
+        [_descriptionTextView becomeFirstResponder];
+    }
+    else if (textField == _addTagTextField)
+    {
+        [self hideKeyboard];
+    }
     return YES;
 }
 
@@ -284,6 +293,5 @@
 {
 
 }
-
 
 @end
