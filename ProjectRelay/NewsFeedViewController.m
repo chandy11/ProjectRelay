@@ -207,6 +207,17 @@
     return cell;
 }
 
+// Parallax Scrolling
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // Get visible cells on table view.
+    NSArray *visibleCells = [self.tableView visibleCells];
+    
+    for (ArticleTableViewCell *cell in visibleCells) {
+        [cell cellOnTableView:self.tableView didScrollOnView:self.view];
+    }
+}
+
 - (void)checkButtonTapped:(id)sender event:(id)event
 {
     NSSet *touches = [event allTouches];

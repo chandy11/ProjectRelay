@@ -17,4 +17,6 @@
 @property (strong, nonatomic) UIColor *color;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 
+- (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
+
 @end
